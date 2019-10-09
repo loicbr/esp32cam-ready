@@ -66,7 +66,9 @@ void wifi_provisioning::handle_root_get()
     for (auto index = 0; index < ssid_items; ++index)
     {
         auto ssid = WiFi.SSID(index);
+        auto rssi = WiFi.RSSI(index);
         log_i("Adding ssid: %s", ssid.c_str());
+        log_i("rssi: %d", rssi);
         ssid_options += "<option value=\"" + ssid + "\">" + ssid + "</option>";
     }
 
