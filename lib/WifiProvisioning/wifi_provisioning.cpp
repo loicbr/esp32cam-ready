@@ -69,7 +69,7 @@ void wifi_provisioning::handle_root_get()
         auto rssi = WiFi.RSSI(index);
         log_i("Adding ssid: %s", ssid.c_str());
         log_i("rssi: %d", rssi);
-        ssid_options += "<option value=\"" + ssid + "\">" + ssid + "</option>";
+        ssid_options += "<option value=\"" + ssid + "\">" + ssid + "(" + rssi + ")</option>";
     }
 
     String html(
