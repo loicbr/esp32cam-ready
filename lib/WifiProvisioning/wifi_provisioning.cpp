@@ -92,7 +92,7 @@ void wifi_provisioning::handle_root_get()
         "</h1>"
         "<hr>"
         "<label for=\"ssids\">Found:</label>"
-        "<select name=\"ssids\" onchange=\"document.getElementByName('ssid')[0].value=this.value\">" +
+        "<select name=\"ssids\" onchange=\"document.getElementsByName('ssid')[0].value=this.value\">" +
         ssid_options +
         "</select>"
         "<br />"
